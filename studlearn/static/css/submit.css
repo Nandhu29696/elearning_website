@@ -1,0 +1,95 @@
+/* Form Buttons */
+
+.btn-form-func {
+	background: #f7b500;
+	border-radius: 4px;
+	border: 2px solid #f7b500;
+	color: #fff;
+	display: inline-block;
+	overflow: hidden;
+	padding: 12px 30px 12px 16px;
+	position: relative;
+	text-decoration: none;
+	line-height: 1;
+	width: 100%;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.btn-form-func:hover {
+	color: #fff;
+}
+
+.btn-form-func .btn-form-func-content {
+	font-size: 1.2em;
+	line-height: 1.2;
+	padding: 0px;
+	position: relative;
+	right: 0;
+	transition: right 300ms ease;
+	display: block;
+    text-align: left;
+    color: #fff;
+}
+
+.btn-form-func .icon {
+	border-left: 1px solid #fff;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 50%;
+	transition: all 300ms ease;
+	transform: translateY(-50%);
+	width: 58px;
+    height: 70%;
+    color: #fff;
+}
+
+.btn-form-func .icon i {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.btn-form-func:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: transparent;
+	opacity: 0;
+	transition: opacity 300ms ease;
+}
+
+.btn-form-func:hover .btn-form-func-content {
+  	right: 100%;
+}
+
+.btn-form-func:hover .icon {
+	border-left: 0;
+	font-size: 1.4em;
+    width: 100%;
+    color: #fff;
+}
+
+.btn-form-func:hover:after {
+      opacity: .2;
+      color: #fff;
+}
+
+.btn-form-func.btn-form-func-alt-color {
+	background: #fff;
+	border-color: #f7b500;
+	color: #f7b500 !important;
+}
+
+.btn-form-func.btn-form-func-alt-color .icon {
+  	border-left-color: #f7b500;
+}
+
+.btn-form-func.btn-form-func-alt-color:after {
+  	background-color: transparent;
+}
+

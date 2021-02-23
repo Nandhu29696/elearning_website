@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=9">
+    <meta name="description" content="Gambolthemes">
+    <meta name="author" content="Gambolthemes">
+    <title>Cursus - Explore</title>
+
+    <link rel="icon" type="image/png" href=" {% static 'images/fav.png' %}">
+
+    <link href=" {% static 'https://fonts.googleapis.com/css?family=Roboto:400,700,500" rel='stylesheet'>
+    <link href=" {% static 'vendor/unicons-2.0.1/css/unicons.css' %} " rel='stylesheet'>
+    <link href=" {% static 'css/vertical-responsive-menu.min.css' %}" rel="stylesheet">
+    <link href=" {% static 'css/style.css' %}" rel="stylesheet">
+    <link href=" {% static 'css/responsive.css' %}" rel="stylesheet">
+    <link href=" {% static 'css/night-mode.css' %}" rel="stylesheet">
+
+    <link href=" {% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+    <link href=" {% static 'vendor/OwlCarousel/assets/owl.carousel.css' %}" rel="stylesheet">
+    <link href=" {% static 'vendor/OwlCarousel/assets/owl.theme.default.min.css' %}" rel="stylesheet">
+    <link href=" {% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href=" {% static 'vendor/semantic/semantic.min.css' %}">
+    <style>
+        @media(max-width:576px) {
+            .c_card {
+                margin: 30px 4px;
+            }
+        }
+    </style>
+</head>
+
+<body style="background:linear-gradient(rgb(253, 246, 234),white);background-repeat: no-repeat;">
+
+    <header class="header clearfix">
+        <div class="main_logo" id="logo">
+            <a href="index.html"><img src=" {% static 'images/logo.svg' %}" alt=""></a>
+            <a href="index.html"><img class="logo-inverse" src="{% static 'images/ct_logo.svg' %}" alt=""></a>
+        </div>
+        <!-- <div class="search120">
+<div class="ui search">
+<div class="ui left icon input swdh10">
+<input class="prompt srch10" type="text" placeholder="Search for Tuts Videos, Tutors, Tests and more..">
+<i class='uil uil-search-alt icon icon1'></i>
+</div>
+</div>
+</div> -->
+        <div class="header_right">
+            <ul>
+                <li class="ui dropdown">
+                    <a href="#" class="option_links" title="Notifications"><i class='uil uil-bell'></i><span
+                            class="noti_count">3</span></a>
+                    <div class="menu dropdown_mn">
+                        <a href="#" class="channel_my item">
+                            <div class="profile_link">
+                                <img src=" {% static 'images/left-imgs/img-1.jpg' %}" alt="">
+                                <div class="pd_content">
+                                    <h6>Rock William</h6>
+                                    <p>Like Your Comment On Video <strong>How to create sidebar menu</strong>.</p>
+                                    <span class="nm_time">2 min ago</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="channel_my item">
+                            <div class="profile_link">
+                                <img src=" {% static 'images/left-imgs/img-2.jpg' %}" alt="">
+                                <div class="pd_content">
+                                    <h6>Jassica Smith</h6>
+                                    <p>Added New Review In Video <strong>Full Stack PHP Developer</strong>.</p>
+                                    <span class="nm_time">12 min ago</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="channel_my item">
+                            <div class="profile_link">
+                                <img src=" {% static 'images/left-imgs/img-9.jpg' %}" alt="">
+                                <div class="pd_content">
+                                    <p> Your Membership Approved <strong>Upload Video</strong>.</p>
+                                    <span class="nm_time">20 min ago</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="vbm_btn" href="instructor_notifications.html">View All <i
+                                class='uil uil-arrow-right'></i></a>
+                    </div>
+                </li>
+                <li class="ui dropdown">
+                    <a href="#" class="opts_account" title="Account">
+                        <img src=" {% static 'images/hd_dp.jpg' %}" alt="">
+                    </a>
+                    <div class="menu dropdown_account">
+                        <div class="channel_my">
+                            <div class="profile_link">
+                                <img src=" {% static 'images/hd_dp.jpg' %}" alt="">
+                                <div class="pd_content">
+                                    <div class="rhte85">
+                                        <h6>Joginder Singh</h6>
+                                        <div class="mef78" title="Verify">
+                                            <i class='uil uil-check-circle'></i>
+                                        </div>
+                                    </div>
+                                    <span><a href="https://gambolthemes.net/cdn-cgi/l/email-protection"
+                                            class="__cf_email__"
+                                            data-cfemail="44232529262b287d7077042329252d286a272b29">[email&#160;protected]</a></span>
+                                </div>
+                            </div>
+                            <a href="my_instructor_profile_view.html" class="dp_link_12">View Instructor Profile</a>
+                        </div>
+                        <div class="night_mode_switch__btn">
+                            <a href="#" id="night-mode" class="btn-night-mode">
+                                <i class="uil uil-moon"></i> Night mode
+                                <span class="btn-night-mode-switch">
+                                    <span class="uk-switch-button"></span>
+                                </span>
+                            </a>
+                        </div>
+                        <a href="instructor_dashboard.html" class="item channel_item">Cursus dashboard</a>
+                        <a href="membership.html" class="item channel_item">Paid Memberships</a>
+                        <a href="setting.html" class="item channel_item">Setting</a>
+                        <a href="help.html" class="item channel_item">Help</a>
+                        <a href="feedback.html" class="item channel_item">Send Feedback</a>
+                        <a href="{% url 'landlogin' %}" class="item channel_item">Sign Out</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="">
+        <div class="sa4d25">
+            <div class="container">
+
+                <div class="row">
+                    <!-- <div class="col-xl-12 col-lg-12">
+ <div class="section3125">
+<div class="explore_search">
+<div class="ui search focus">
+<div class="ui left icon input swdh11">
+<input class="prompt srch_explore" type="text" placeholder="Search for Tuts Videos, Tutors, Tests and more..">
+<i class="uil uil-search-alt icon icon2"></i>
+</div>
+</div>
+</div>
+</div> 
+</div> -->
+
+                    <div class="col-lg-12 mt-62">
+                        <div class="text-center">
+                            <h1>Intermediate</h1>
+                            <p style="font-size: 30px;">Elevate your skills with our most in-demand programmes</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-9">
+                        <div class="_14d25">
+                            <div class="row mr-lg-2">
+
+                                {% for ic in ic %}
+
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="fcrse_1 mt-30">
+                                        <a href="{% url 'intercourseview' ic.id %}" class="fcrse_img">
+                                            <img src="{{ic.imgcourse.url}}" alt="">
+                                            <div class="course-overlay">
+                                                <div class="badge_seller">{{ic.offercourse}}</div>
+                                                <div class="crse_reviews">
+                                                    <i class="uil uil-star"></i>4.5
+                                                </div>
+
+                                                <div class="crse_timer">
+                                                    {{ic.courseduration}}
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="fcrse_content">
+                                            <div class="eps_dots more_dropdown">
+                                                <a href="#"><i class="uil uil-ellipsis-v"></i></a>
+                                                <div class="dropdown-content">
+                                                    <span><i class='uil uil-share-alt'></i>Share</span>
+                                                    <span><i class="uil uil-heart"></i>Save</span>
+                                                    <span><i class='uil uil-ban'></i>Not Interested</span>
+                                                    <span><i class="uil uil-windsock"></i>Report</span>
+                                                </div>
+                                            </div>
+                                            <div class="vdtodt">
+                                                <span class="vdt14">{{ic.viewscourse}} views</span>
+                                                <span class="vdt14">{{ic.datecourse}} days ago</span>
+                                            </div>
+                                            <a href="course_detail_view.html" class="crse14s">{{ic.titlecourse}}</a>
+                                            <a href="#" class="crse-cate">{{bc.subtitlecourse}}</a>
+                                            <div class="auth1lnkprce">
+                                                <p class="cr1fot">By <a href="#">{{ic.courseauthor}}</a></p>
+                                                <div class="prce142">${{ic.pricecourse}}</div>
+                                                <button class="shrt-cart-btn" title="cart"><i
+                                                        class="uil uil-shopping-cart-alt"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {% endfor %}
+
+                                
+                                <!-- <div class="col-md-12">
+<div class="main-loader mt-50">
+<div class="spinner">
+<div class="bounce1"></div>
+<div class="bounce2"></div>
+<div class="bounce3"></div>
+</div>
+</div>
+</div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="row p-3 c_card card mt-30" style="border-radius: 10px;">
+                            <h2 class="st_title1"><i class="uil uil-exclamation-circle "></i>Have any doubts?<br>
+                                <p style="margin-left: 30px; font-size: 11px;">Fill-up the form,our professional contact
+                                    you.</p>
+                            </h2>
+                            <form action="" method="POST">
+
+                                {% csrf_token %}
+
+                            <div class="fcrse_content">
+                                <div class="row ">
+                                    <div class="col-lg-12">
+                                        <div class="ui search focus mt-20">
+                                            <div class="ui left icon input swdh11 swdh19">
+                                                <input class="" type="text" name="studname" value="" id="id[name]"
+                                                    required="" maxlength="64" placeholder="Name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="ui search focus mt-20">
+                                            <div class="ui left icon input swdh11 swdh19">
+                                                <input class="" type="text" name="studemail" value="" id="id[name]"
+                                                    required="" maxlength="10" placeholder="Email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="ui search focus mt-20">
+                                            <div class="ui left icon input swdh11 swdh19">
+                                                <input class="" type="text" name="studmobile" value="" id="id[name]"
+                                                    required="" maxlength="10" placeholder="Mobile Number">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="ui fluid search selection dropdown focus mt-20 ">
+                                            <input type="hidden" name="langdoubt" class="prompt srch_explore">
+                                            <i class="dropdown icon"></i>
+                                            <input class="search" autocomplete="off" tabindex="0" name="langdoubt">
+                                            <div class="default text">course</div>
+                                            <div class="menu transition hidden" tabindex="-1">
+                                                <div class="item selected" data-value="af">java</div>
+                                                <div class="item " data-value="af">Python</div>
+                                                <div class="item " data-value="af">JavaScript</div>
+                                                <div class="item " data-value="af">Php</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 mt-20 ">
+                                    <button type="submit" name="submit" class="btn-form-func">
+                                        <span class="btn-form-func-content">SUBMIT</span>
+                                        <span class="icon"><i class="fa fa-check" aria-hidden="true"></i></span>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer mt-30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="item_f1">
+                            <a href="about_us.html">About</a>
+                            <a href="our_blog.html">Blog</a>
+                            <a href="career.html">Careers</a>
+                            <a href="press.html">Press</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="item_f1">
+                            <a href="help.html">Help</a>
+                            <a href="coming_soon.html">Advertise</a>
+                            <a href="coming_soon.html">Developers</a>
+                            <a href="contact_us.html">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="item_f1">
+                            <a href="terms_of_use.html">Copyright Policy</a>
+                            <a href="terms_of_use.html">Terms</a>
+                            <a href="terms_of_use.html">Privacy Policy</a>
+                            <a href="sitemap.html">Sitemap</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="item_f3">
+                            <a href="#" class="btn1542">Teach on Cursus</a>
+                            <div class="lng_btn">
+                                <div class="ui language bottom right pointing dropdown floating" id="languages"
+                                    data-content="Select Language">
+                                    <a href="#"><i class='uil uil-globe lft'></i>Language<i
+                                            class='uil uil-angle-down rgt'></i></a>
+                                    <div class="menu">
+                                        <div class="scrolling menu">
+                                            <div class="item" data-percent="100" data-value="en" data-english="English">
+                                                <span class="description">English</span>
+                                                English
+                                            </div>
+                                            <div class="item" data-percent="94" data-value="da" data-english="Danish">
+                                                <span class="description">dansk</span>
+                                                Danish
+                                            </div>
+                                            <div class="item" data-percent="94" data-value="es" data-english="Spanish">
+                                                <span class="description">Español</span>
+                                                Spanish
+                                            </div>
+                                            <div class="item" data-percent="34" data-value="zh" data-english="Chinese">
+                                                <span class="description">简体中文</span>
+                                                Chinese
+                                            </div>
+                                            <div class="item" data-percent="54" data-value="zh_TW"
+                                                data-english="Chinese (Taiwan)">
+                                                <span class="description">中文 (臺灣)</span>
+                                                Chinese (Taiwan)
+                                            </div>
+                                            <div class="item" data-percent="79" data-value="fa" data-english="Persian">
+                                                <span class="description">پارسی</span>
+                                                Persian
+                                            </div>
+                                            <div class="item" data-percent="41" data-value="fr" data-english="French">
+                                                <span class="description">Français</span>
+                                                French
+                                            </div>
+                                            <div class="item" data-percent="37" data-value="el" data-english="Greek">
+                                                <span class="description">ελληνικά</span>
+                                                Greek
+                                            </div>
+                                            <div class="item" data-percent="37" data-value="ru" data-english="Russian">
+                                                <span class="description">Русский</span>
+                                                Russian
+                                            </div>
+                                            <div class="item" data-percent="36" data-value="de" data-english="German">
+                                                <span class="description">Deutsch</span>
+                                                German
+                                            </div>
+                                            <div class="item" data-percent="23" data-value="it" data-english="Italian">
+                                                <span class="description">Italiano</span>
+                                                Italian
+                                            </div>
+                                            <div class="item" data-percent="21" data-value="nl" data-english="Dutch">
+                                                <span class="description">Nederlands</span>
+                                                Dutch
+                                            </div>
+                                            <div class="item" data-percent="19" data-value="pt_BR"
+                                                data-english="Portuguese">
+                                                <span class="description">Português(BR)</span>
+                                                Portuguese
+                                            </div>
+                                            <div class="item" data-percent="17" data-value="id"
+                                                data-english="Indonesian">
+                                                <span class="description">Indonesian</span>
+                                                Indonesian
+                                            </div>
+                                            <div class="item" data-percent="12" data-value="lt"
+                                                data-english="Lithuanian">
+                                                <span class="description">Lietuvių</span>
+                                                Lithuanian
+                                            </div>
+                                            <div class="item" data-percent="11" data-value="tr" data-english="Turkish">
+                                                <span class="description">Türkçe</span>
+                                                Turkish
+                                            </div>
+                                            <div class="item" data-percent="10" data-value="kr" data-english="Korean">
+                                                <span class="description">한국어</span>
+                                                Korean
+                                            </div>
+                                            <div class="item" data-percent="7" data-value="ar" data-english="Arabic">
+                                                <span class="description">العربية</span>
+                                                Arabic
+                                            </div>
+                                            <div class="item" data-percent="6" data-value="hu" data-english="Hungarian">
+                                                <span class="description">Magyar</span>
+                                                Hungarian
+                                            </div>
+                                            <div class="item" data-percent="6" data-value="vi"
+                                                data-english="Vietnamese">
+                                                <span class="description">tiếng Việt</span>
+                                                Vietnamese
+                                            </div>
+                                            <div class="item" data-percent="5" data-value="sv" data-english="Swedish">
+                                                <span class="description">svenska</span>
+                                                Swedish
+                                            </div>
+                                            <div class="item" data-precent="4" data-value="pl" data-english="Polish">
+                                                <span class="description">polski</span>
+                                                Polish
+                                            </div>
+                                            <div class="item" data-percent="6" data-value="ja" data-english="Japanese">
+                                                <span class="description">日本語</span>
+                                                Japanese
+                                            </div>
+                                            <div class="item" data-percent="0" data-value="ro" data-english="Romanian">
+                                                <span class="description">românește</span>
+                                                Romanian
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="footer_bottm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="fotb_left">
+                                        <li>
+                                            <a href="index.html">
+                                                <div class="footer_logo">
+                                                    <img src=" {% static 'images/logo1.svg' %}" alt="">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <p>© 2020 <strong>Cursus</strong>. All Rights Reserved.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="edu_social_links">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="fab fa-youtube"></i></a>
+                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script data-cfasync="false" src=" {% static '../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"></script>
+    <script src=" {% static 'js/vertical-responsive-menu.min.js' %}"></script>
+    <script src=" {% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src=" {% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src=" {% static 'vendor/OwlCarousel/owl.carousel.js' %}"></script>
+    <script src=" {% static 'vendor/semantic/semantic.min.js' %}"></script>
+    <script src=" {% static 'js/custom.js' %}"></script>
+    <script src=" {% static 'js/night-mode.js' %}"></script>
+</body>
+
+<!-- Mirrored from gambolthemes.net/html-items/cursus_demo_f12/explore.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Dec 2020 13:57:00 GMT -->
+
+</html>
